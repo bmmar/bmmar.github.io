@@ -1,2 +1,1 @@
-# interactive-card-details-form
- Frontend Mentor Challenge
+# bmmar.github.io

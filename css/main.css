@@ -3,30 +3,43 @@ body {
 }
 
 .container {
-  max-width: 30%;
-  margin: 0px auto;
+  max-width: 28%;
+  margin: 2rem auto;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10%;
 }
 
+.image {
+  display: flex;
+  justify-content: center;
+}
+
 img {
-  max-width: 50%;
-  margin: 0px auto;
-  padding: 3em;
+  max-width: 90%;
+  margin: 1.5rem auto 0 auto;
   border-radius: 10%;
 }
 
 .bold-text {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 700;
+  font-size: 30px;
   text-align: center;
+  padding: 0 10%;
+}
+
+.lower-text {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding: 0% 20%;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: 0 0 5px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-

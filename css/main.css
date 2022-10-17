@@ -31,6 +31,7 @@ img {
 @media (max-width: 700px) {
     .bold-text{font-size: 1em;}
     .lower-text{font-size: .75em}
+  .container{max-width: 60%}
 }
 
 .lower-text {

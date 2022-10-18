@@ -1,50 +1,84 @@
 body {
-  background-color: hsl(212, 45%, 89%);
+  background-color: hsl(30, 38%, 92%)
+}
+main {
+  margin: 50px auto;
+  display: flex;
+  max-width: 520px;
+  max-height: 390px;
+  /* border: black 1px solid; */
+  border-radius: 1em;
 }
 
-.container {
-  max-width: 28%;
-  margin: 2rem auto;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 10%;
+h2 {
+  font-family: Montserrat, sans-serif;
+  color:#a7a7a7;
+  font-size: 0.6em;
+  /* font-weight: lighter; */
+  letter-spacing: 0.4em;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  line-height: 0.9em;
 }
 
 .image {
-  display: flex;
-  justify-content: center;
+  background-size: contain;
+  /* border: black 1px solid; */
 }
 
 img {
-  max-width: 90%;
-  margin: 1.5rem auto 0 auto;
-  border-radius: 10%;
+  object-fit: cover;
+  width: 260px;
+  height: 390px;
+  border-radius: 1em 0 0 1em;
 }
 
-.bold-text {
-  font-family: "Outfit", sans-serif;
+.right-block {
+  background-color: white;
+  padding: 20px 20px 0px 20px;
+  /* width: 260px; */
+  border-radius: 0 1em 1em 0;
+}
+p {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.85rem;
+  color: #a7a7a7;
+  line-height: 1.4em;
+  margin: 15px 0 30px 0;
+}
+
+.price {
+  font-family: "Fraunces", serif;
   font-weight: 700;
-  font-size: 2rem;
-  text-align: center;
-  padding: 0 10%;
+  font-size: 2em;
+  color: #347D3A;
+  margin: 0 15px 0 0;  
 }
 
-@media (max-width: 700px) {
-    .bold-text{font-size: 1em;}
-    .lower-text{font-size: .75em}
-  .container{max-width: 60%}
+.strikethrough {
+  text-decoration: line-through
 }
 
-.lower-text {
-  font-family: "Outfit", sans-serif;
-  font-weight: 400;
-  text-align: center;
-  padding: 0% 20%;
+.btn {
+  background-color: #347D3A;
+  color: white;
+  padding: 10px 59px;
+  border-radius: .8em;
+  border: none;
 }
+
+.shopping-cart-icon {
+  margin-right: .7em;
+}
+
+
 
 .attribution {
   font-size: 11px;
   text-align: center;
-  padding: 0 0 5px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);

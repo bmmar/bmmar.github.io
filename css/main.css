@@ -1,5 +1,7 @@
 body {
-  background-color: hsl(30, 38%, 92%)
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
 }
 main {
   margin: 50px auto;
@@ -10,9 +12,16 @@ main {
   border-radius: 1em;
 }
 
+img {
+  object-fit: cover;
+  width: 260px;
+  height: 390px;
+  border-radius: 1em 0 0 1em;
+}
+
 h2 {
   font-family: Montserrat, sans-serif;
-  color:#a7a7a7;
+  color: #a7a7a7;
   font-size: 0.6em;
   /* font-weight: lighter; */
   letter-spacing: 0.4em;
@@ -27,13 +36,6 @@ h1 {
 .image {
   background-size: contain;
   /* border: black 1px solid; */
-}
-
-img {
-  object-fit: cover;
-  width: 260px;
-  height: 390px;
-  border-radius: 1em 0 0 1em;
 }
 
 .right-block {
@@ -54,27 +56,25 @@ p {
   font-family: "Fraunces", serif;
   font-weight: 700;
   font-size: 2em;
-  color: #347D3A;
-  margin: 0 15px 0 0;  
+  color: #347d3a;
+  margin: 0 15px 0 0;
 }
 
 .strikethrough {
-  text-decoration: line-through
+  text-decoration: line-through;
 }
 
 .btn {
-  background-color: #347D3A;
+  background-color: #347d3a;
   color: white;
   padding: 10px 59px;
-  border-radius: .8em;
+  border-radius: 0.8em;
   border: none;
 }
 
 .shopping-cart-icon {
-  margin-right: .7em;
+  margin-right: 0.7em;
 }
-
-
 
 .attribution {
   font-size: 11px;
@@ -82,4 +82,32 @@ p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+    max-width: 390px;
+    max-height: auto;
+  }
+  img {
+    content: url("images/image-product-mobile.jpg");
+    width: 390px;
+    height: 250px;
+    border-radius: 1em 1em 0 0;
+  }
+  .image {
+    height: 250px;
+  }
+  .right-block {
+    border-radius: 0 0 1em 1em;
+  }
+  .attribution {
+    display: none;
+  }
+  .btn {    
+    padding: 10px 125px;
+    margin: 0px auto;
+    justify-content: center;
+  }
 }

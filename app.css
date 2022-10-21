@@ -1,2 +1,43 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    max-height: 300px;
+    border: black 1px solid;
+    flex-grow: 1;
+}
+
+.card-bkg {
+  position: relative;
+  top: -40%;
+  left: 22%;
+  width: 80%;
+}
+
+.card-front {    
+    width: 70%
+}
+
+.container {
+  max-width: 375px;
+  
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

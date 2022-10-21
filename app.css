@@ -1,37 +1,53 @@
 body {
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
+  display: flex;
+  justify-content: center;
 }
 
 main {
   display: flex;
-  justify-content: center;
-  
+  align-items: center;
+  flex-direction: column;
+  max-width: 375px;
 }
 
 .image-wrapper {
-    display: flex;
-    flex-direction: column;
-    overflow: visible;
-    max-height: 300px;
-    border: black 1px solid;
-    flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* grid-template-rows: repeat(4, 1fr); */
+  max-height: 300px;
+  border: black 1px solid;
+  position: relative;
+}
+
+.main-mob {
+  grid-row: 1;
+  grid-column: 1 / span 12;
+  z-index: 2;
 }
 
 .card-bkg {
-  position: relative;
-  top: -40%;
-  left: 22%;
-  width: 80%;
+  grid-row: 1;
+  grid-column: 2 / span 10;
+  padding-top: 10%;
+  padding-left: 15%;
+  width: 90%;
+  z-index: 5;
 }
 
-.card-front {    
-    width: 70%
+.card-front {
+  grid-row: 1;
+  grid-column: 1 / span 10;
+  width: 95%;
+  padding-top: 40%;
+  padding-left: 5%;
+  z-index: 10;
 }
 
 .container {
   max-width: 375px;
-  
+  align-items: center;
 }
 
 .attribution {

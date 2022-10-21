@@ -15,9 +15,7 @@ main {
 .image-wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  /* grid-template-rows: repeat(4, 1fr); */
   max-height: 300px;
-  border: black 1px solid;
   position: relative;
 }
 
@@ -44,6 +42,11 @@ main {
   padding-left: 5%;
   z-index: 10;
 }
+
+/* .card-writing {
+    grid-row: 1;
+    grid-column: 2;
+} */
 
 .container {
   max-width: 375px;

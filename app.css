@@ -17,6 +17,7 @@ main {
   grid-template-columns: repeat(12, 1fr);
   /* max-height: 200; */
   /* position: relative; */
+  /* border: black 2px solid; */
 }
 
 .main-mob {
@@ -27,8 +28,8 @@ main {
 
 .noughts {
   position: relative;
-  top: -283px;
-  left: 300px;
+  top: -163px;
+  left: 282px;
   color:rgb(224, 224, 224);  
   z-index: 50;
   font-size: .7rem;
@@ -39,64 +40,72 @@ main {
   grid-column: 2 / span 10;
   padding-top: 10%;
   padding-left: 15%;
-  width: 90%;
+  width: 85%;
   z-index: 5;
-  border: 1px solid black;
-}
-
-.credit-card-front {
-  grid-row: 1;
-  padding-left: 5%;
-  /* z-index: 10; */
-  /* grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr); */
-  border: 1px solid black;
-  grid-column: 1 / span 10;
-  padding-top: 115px;
-  max-height: 0;
+  /* border: 1px solid black; */
 }
 
 .card-front {
-  max-width: 100%;
-  
-  /* box-shadow: 2px 20px 0px 0px rgb(243, 243, 243); */
+  max-width: 80%;
+  grid-row: 1;
+  z-index: 5;
+  grid-column: 1 / span 10;
+  padding-top: 120px;
+  padding-left: 25px;
 }
 
+.text-on-card {
+  width: 400%;
+  position: relative;
+  left: -280px;
+  /* top: 40px; */
+}
 .card-writing, .name{
   color: rgb(218, 209, 224);
-  font-weight: 200;
+  font-weight: 500;
   padding-left: 20px;
+  z-index: 6;  
+  align-self: flex-start;
 }
 
 .card-writing {
-    letter-spacing: 3px;    
+  font-size: 1.05rem;
+    letter-spacing: 1.5px;    
     position: relative;
-    top: -120px;
-    display: block;    
+    top: -150px;
+    left: 20px
 }
 
 .name {    
   position: relative;
-  top: -115px;
-  font-size: 0.6rem;
+  top: -135px;
+  left: 20px;
+  font-size: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 .card-logo {
   position: relative;
-  top: -150px;
+  top: -130px;
+  z-index: 6;
 }
 
 .card-date {
+  color: rgb(218, 209, 224);
   position: relative;
-  left : 120px
+  top: -145px;
+  font-size: 0.5rem;
+  left : 60px;
+  z-index: 6;
+  letter-spacing: 1.5px;
 }
 
 .input-area {
   background: linear-gradient(hsl(0, 0%, 92%), hsl(0, 0%, 100%));
+  width: 375px;
   position: relative;
-  top: -16px;
-  z-index: 4;
+  top: -189px;
+  z-index: 1;
 }
 
 .input-form {
@@ -115,7 +124,7 @@ form {
 input {
   font-size: 1.1rem;
   font-family: "Space Grotesk", sans-serif;
-  color: #ebebeb;
+  color: black;
   padding: 0.6rem;
   border-radius: 0.6rem;
   border: #d5d5d5 1px solid;
@@ -129,18 +138,25 @@ input {
 }
 
 :-moz-placeholder { 
-   color: red;
+   color: rgb(196, 195, 195);
 }
 
 ::-moz-placeholder {
-   color: red;
+   color: rgb(196, 195, 195);
 }
 
 :-ms-input-placeholder {  
-   color: red;
+   color: rgb(196, 195, 195)red;
 }
 
-.bottom-labels {
+.card-error-text {
+  font-size: 0.5rem;
+  color: hsl(0, 100%, 66%);
+  text-transform: normal;
+  margin-top: -10px;
+  display: none;
+}
+.bottom-labels  {
   display: block;
 }
 
@@ -162,6 +178,16 @@ input {
   margin-left: .7rem;
 }
 
+button {
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 12px 130px;
+  margin: 1rem 2rem 0 1.5rem;
+  width: 85%;
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
 .container {
   max-width: 375px;
   align-items: center;

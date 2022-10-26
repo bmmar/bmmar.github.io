@@ -21,7 +21,16 @@ const monthErrorText = document.querySelector(".month-error-text");
 const yearErrorText = document.querySelector(".year-error-text");
 const cvcErrorText = document.querySelector(".cvc-error-text");
 const confirmBtn = document.querySelector("button");
+const inputArea = document.querySelector(".input-area");
+const completedState = document.querySelector(".completed-state");
+let isNameOK = false;
+let isNumberOK = false;
+let isMonthOK = false;
+let isYearOK = false;
+let isCvcOK = false;
 let complete = true;
+
+completedState.innerHTML = "";
 
 function getInputName() {
   if (inputName.value == "") {
@@ -31,7 +40,7 @@ function getInputName() {
   }
   nameErrorText.style.opacity = "0";
   inputName.style.borderColor = "black";
-
+  isNameOK = true;
 }
 
 function getCardNumber() {
@@ -52,11 +61,11 @@ function getCardNumber() {
       cardErrorText.style.opacity = "1";
       inputNum.style.borderColor = "red";
       cardErrorText.innerHTML = "Card number must be 12 digits";
-      complete = false;
+      isNumberOK = false;
     } else {
       cardErrorText.style.opacity = "0";
       inputNum.style.borderColor = "black";
-      complete = true;
+      isNumberOK = true;
     }
   }
 }
@@ -71,11 +80,11 @@ function getMonth() {
     monthErrorText.style.opacity = "1";
     inputMonth.style.borderColor = "red";
     monthErrorText.innerHTML = "Invalid month";
-    complete = false;
+    isMonthOK = false;
   } else {
     monthErrorText.style.opacity = "0";
     inputMonth.style.borderColor = "black";
-    complete = true;
+    isMonthOK = true;
   }
 }
 
@@ -91,11 +100,11 @@ function getYear() {
     yearErrorText.style.opacity = "1";
     inputYear.style.borderColor = "red";
     yearErrorText.innerHTML = "Invalid year";
-    complete = false;
+    isYearOK = false;
   } else {
     yearErrorText.style.opacity = "0";
     inputYear.style.borderColor = "black";
-    complete = true;
+    isYearOK = true;
   }
 }
 
@@ -112,11 +121,11 @@ function getCVC() {
     cvcErrorText.style.opacity = "1";
     inputCVC.style.borderColor = "red";
     cvcErrorText.innerHTML = "Invalid CVC number";
-    complete = false;
+    isCvcOK = false;
   } else {
     cvcErrorText.style.opacity = "0";
     inputCVC.style.borderColor = "black";
-    complete = true;
+    isCvcOK = true;
   }
 }
 
@@ -190,7 +199,12 @@ function checkOnSubmit(e) {
     cvcErrorText.innerHTML = "Cannot be blank";
     complete = false;
   }
-  if (complete === true) { 
+  if (complete === true && isNameOK === true && isNumberOK === true && isMonthOK === true && isYearOK === true && isCvcOK === true) { 
     console.log("Now run fucntion for complete screen!")
+    inputArea.innerHTML = "";
+    completedState.innerHTML = completedAreaString;
   }
 }
+
+const completedAreaString =
+  '<div class="tick-image"><svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg></div><h1>Thank you!</h1><h2>We\'ve added your card details</h2><button>Continue</button>';

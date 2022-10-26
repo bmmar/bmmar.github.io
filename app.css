@@ -28,8 +28,8 @@ main {
 
 .noughts {
   position: relative;
-  top: -163px;
-  left: 282px;
+  top: -171px;
+  left: 296px;
   color:rgb(224, 224, 224);  
   z-index: 50;
   font-size: .7rem;
@@ -46,11 +46,11 @@ main {
 }
 
 .card-front {
-  max-width: 80%;
+  max-width: 86%;
   grid-row: 1;
   z-index: 5;
   grid-column: 1 / span 10;
-  padding-top: 120px;
+  padding-top: 117px;
   padding-left: 25px;
 }
 
@@ -86,7 +86,8 @@ main {
 }
 .card-logo {
   position: relative;
-  top: -130px;
+  top: -125px;
+  left:-5px;
   z-index: 6;
 }
 
@@ -104,7 +105,7 @@ main {
   background: linear-gradient(hsl(0, 0%, 92%), hsl(0, 0%, 100%));
   width: 375px;
   position: relative;
-  top: -189px;
+  top: -200px;
   z-index: 1;
 }
 
@@ -129,8 +130,8 @@ input {
   border-radius: 0.6rem;
   border: #d5d5d5 1px solid;
   width:85%;
-  margin: 10px 0;
   z-index: 12;
+  margin: 7px 0 15px 0;
 }
 
 ::-webkit-input-placeholder {
@@ -150,12 +151,65 @@ input {
 }
 
 .card-error-text {
+  position: relative;
+  top: -3px;
+  left: 6px;
   font-size: 0.5rem;
   color: hsl(0, 100%, 66%);
   text-transform: normal;
   margin-top: -10px;
-  display: none;
+  display: block;
+  opacity: 0;
 }
+
+.month-error-text {
+  position: relative;
+  top: -3px;
+  left: 6px;
+  font-size: 0.5rem;
+  color: hsl(0, 100%, 66%);
+  text-transform: normal;
+  margin-top: -10px;
+  display: block;
+  opacity: 0;
+}
+
+.year-error-text {
+  position: relative;
+  top: -3px;
+  left: 75px;
+  font-size: 0.5rem;
+  color: hsl(0, 100%, 66%);
+  text-transform: normal;
+  margin-top: -10px;
+  display: block;
+  opacity: 0;
+}
+
+.cvc-error-text {
+  position: relative;
+  top: -3px;
+  left: 158px;
+  font-size: 0.5rem;
+  color: hsl(0, 100%, 66%);
+  text-transform: normal;
+  margin-top: -10px;
+  display: block;
+  opacity: 0;
+}
+
+.name-error-text {
+  position: relative;
+  top: -3px;
+  left: 6px;
+  font-size: 0.5rem;
+  color: hsl(0, 100%, 66%);
+  text-transform: normal;
+  margin-top: -10px;
+  display: block;
+  opacity: 0;
+}
+
 .bottom-labels  {
   display: block;
 }

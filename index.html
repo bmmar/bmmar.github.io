@@ -49,7 +49,7 @@
               height="47"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 70 70"
+              viewBox="0 0 78 78"
             >
               <ellipse
                 cx="23.478"
@@ -61,7 +61,7 @@
               <path
                 d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
                 stroke="#fff"
-              />
+              />              
             </svg>
           </div>
           </div>
@@ -84,6 +84,7 @@
                 id="input-name"
                 maxlength="23"
               />
+              <div class="name-error-text">Cannot be blank</div>
               <label for="card-number">Card Number</label>
               <input
                 type="text"
@@ -112,6 +113,9 @@
                 maxlength="2"
               />
               <input type="text" name="cvc" placeholder="e.g. 123" id="cvc" maxlength="4"/>
+              <div class="month-error-text">Invalid month</div>
+              <div class="year-error-text">Invalid year</div>
+              <div class="cvc-error-text">Invalid CVC</div>
             </div>
             <button>Confirm</button>
           </form>

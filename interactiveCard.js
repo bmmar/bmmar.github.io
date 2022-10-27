@@ -30,13 +30,18 @@ let isYearOK = false;
 let isCvcOK = false;
 let complete = true;
 
+const completedAreaString =
+  '<div class="tick-image"><svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg></div><h1>Thank you!</h1><h2>We\'ve added your card details</h2><button>Continue</button>';
+
 completedState.innerHTML = "";
 
 function getInputName() {
   if (inputName.value == "") {
     nameOnCard.innerHTML = "Jane Appleseed";
+    complete = false;
   } else {
     nameOnCard.innerHTML = inputName.value;
+    complete = true;
   }
   nameErrorText.style.opacity = "0";
   inputName.style.borderColor = "black";
@@ -48,12 +53,15 @@ function getCardNumber() {
     numOnCard.innerHTML = "0000 0000 0000 0000";
     cardErrorText.style.opacity = "0";
     inputNum.style.borderColor = "black";
+    complete = false;
   } else {
     numOnCard.textContent = insertSpaces(inputNum.value);
+    complete = true;
     if (!numeric(inputNum.value)) {
       cardErrorText.style.opacity = "1";
       inputNum.style.borderColor = "red";
       cardErrorText.innerHTML = "Wrong format, numbers only";
+      isNumberOK = false;
     } else if (
       inputNum.value.toString().length < 16 &&
       inputNum.value.toString().length > 0
@@ -73,8 +81,10 @@ function getCardNumber() {
 function getMonth() {
   if (inputMonth.value == "") {
     monthOnCard.innerHTML = "00/00";
+    complete = false;
   } else {
     monthOnCard.innerHTML = inputMonth.value + "/00";
+    complete = true;
   }
   if (parseInt(inputMonth.value) < 1 || parseInt(inputMonth.value) > 12) {
     monthErrorText.style.opacity = "1";
@@ -91,10 +101,16 @@ function getMonth() {
 function getYear() {
   if (inputYear.value == "" && inputMonth.value == "") {
     monthOnCard.innerHTML = "00/00";
+    complete = false;
   } else if (inputYear.value == "" && inputMonth.value !== "") {
     monthOnCard.innerHTML = inputMonth.value + "/00";
-  } else {
+    complete = false;
+  } else if (inputMonth.value != "" && inputYear.value != "") {
     monthOnCard.innerHTML = inputMonth.value + "/" + inputYear.value;
+    complete = true;
+  } else { 
+    monthOnCard.innerHTML = inputMonth.value + "/" + inputYear.value;
+    complete = false;
   }
   if (parseInt(inputYear.value) < 22 || parseInt(inputYear.value) > 35) {
     yearErrorText.style.opacity = "1";
@@ -111,8 +127,10 @@ function getYear() {
 function getCVC() {
   if (inputCVC.value == "") {
     cvcOnCard.innerHTML = "000";
+    complete = false;
   } else {
     cvcOnCard.innerHTML = inputCVC.value;
+    complete = true;
   }
   if (
     inputCVC.value.toString().length < 3 &&
@@ -152,7 +170,7 @@ inputCVC.addEventListener("focusout", () => {
 confirmBtn.addEventListener("click", (e) => {
   e.preventDefault();
   checkOnSubmit();
-})
+});
 
 function numeric(inputtxt) {
   var letterNumber = /^[0-9]+$/;
@@ -174,37 +192,37 @@ function insertSpaces(number) {
   return alteredNumber;
 }
 
-function checkOnSubmit(e) { 
+function checkOnSubmit(e) {
   if (inputName.value == "") {
-    nameErrorText.style.opacity = "1";
-    inputName.style.borderColor = "red";
-    nameErrorText.innerHTML = "Cannot be blank";
-    complete = false;
+    blankCheck(inputName, nameErrorText)
   }
   if (inputNum.value == "") {
-    cardErrorText.style.opacity = "1";
-    inputNum.style.borderColor = "red";
-    cardErrorText.innerHTML = "Cannot be blank";
-    complete = false;
+    blankCheck(inputNum, cardErrorText)
   }
   if (inputMonth.value == "") {
-    monthErrorText.style.opacity = "1";
-    inputMonth.style.borderColor = "red";
-    monthErrorText.innerHTML = "Cannot be blank";
-    complete = false;
+    blankCheck(inputMonth, monthErrorText)
+  }
+  if (inputYear.value == "") { 
+    blankCheck(inputYear, yearErrorText);
   }
   if (inputCVC.value == "") {
-    cvcErrorText.style.opacity = "1";
-    inputCVC.style.borderColor = "red";
-    cvcErrorText.innerHTML = "Cannot be blank";
-    complete = false;
+    blankCheck(inputCVC, cvcErrorText);
   }
-  if (complete === true && isNameOK === true && isNumberOK === true && isMonthOK === true && isYearOK === true && isCvcOK === true) { 
-    console.log("Now run fucntion for complete screen!")
+  if (
+    complete === true &&
+    isNameOK === true &&
+    isNumberOK === true &&
+    isMonthOK === true &&
+    isYearOK === true &&
+    isCvcOK === true
+  ) {
     inputArea.innerHTML = "";
     completedState.innerHTML = completedAreaString;
   }
 }
 
-const completedAreaString =
-  '<div class="tick-image"><svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg></div><h1>Thank you!</h1><h2>We\'ve added your card details</h2><button>Continue</button>';
+function blankCheck(inputArea, errorText) {
+  errorText.style.opacity = "1";
+  inputArea.style.borderColor = "red";
+  errorText.innerHTML = "Cannot be blank";
+}

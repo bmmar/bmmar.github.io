@@ -33,8 +33,6 @@ img {
   cursor: pointer;
 }
 
-.main-image {
-}
 .overlay {
   background-color: rgba(6, 150, 176, 0.5);
   position: absolute;

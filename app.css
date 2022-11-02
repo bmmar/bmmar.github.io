@@ -9,6 +9,7 @@ body {
   font-family: "Outfit", sans-serif;
   font-size: 18px;
   margin: 20px auto;
+  justify-content:center;
 }
 
 main {

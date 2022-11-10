@@ -4,65 +4,144 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>NFT preview card component</title>
+
     <link rel="stylesheet" href="app.css" />
+
+    <title>News homepage</title>
   </head>
   <body>
     <main>
-      <div class="card">
-        <div class="main-image">
-        <img
-          src="./images/image-equilibrium.jpg"
-          alt="Picture of the Equilibrium"
+      <div class="container-for-mobile-grid">
+      <nav class="navbar">
+        <!-- LOGO -->
+          <img src="./assets/images/logo.svg" alt="logo" />
+
+        <!-- NAVIGATION MENU -->         
+          <div class="menu-icon">
+            <img src="./assets/images/icon-menu.svg" alt="menu icon" />
+          </div>          
+          
+          <div class="menu">
+            <li id="exit">
+              <img src="./assets/images/icon-menu-close.svg" alt="Exit Cross" />
+            </li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">New</a></li>
+            <li class="popular">
+              <a href="/">Popular</a>
+            </li>
+            <li><a href="/">Trending</a></li>
+            <li><a href="/">Categories</a></li>
+          </div>        
+      </nav>
+      <!-- Central Section -->
+      <div class="layout">
+        <div class="mobile-main-image">
+          <img
+          src="./assets/images/image-web-3-mobile.jpg"
+            alt="Pic of building blocks representing Web 3.0"
           />
-          <div class="overlay">
-            <div class="view-icon">
-              <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h48v48H0z"/><path d="M24 9C14 9 5.46 15.22 2 24c3.46 8.78 12 15 22 15 10.01 0 18.54-6.22 22-15-3.46-8.78-11.99-15-22-15Zm0 25c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10Zm0-16c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6Z" fill="#FFF" fill-rule="nonzero"/></g></svg>
-            </div>
-          </div>
         </div>
-        <h1>Equilibrium #3429</h1>
-        <p>Our Equilibrium collection promotes balance and calm.</p>
-        <div class="ethereum-and-time">
-          <svg width="11" height="18" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z"
-              fill="#00FFF8"
+        <div class="desktop-main-image">
+          <img
+            src="./assets/images/image-web-3-desktop.jpg"
+            alt="Pic of building blocks representing Web 3.0"
+          />
+        </div>
+        <h1>The Bright Future of Web 3.0?</h1>
+        <p class="bright-future-text">
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
+        <button class="red-callout">Read more</button>
+        <div class="black-box">
+          <span class="orange-headline">New</span>
+          <span class="title">Hydrogen VS Electric Cars</span>
+          <span class="black-box-text"
+            >Will hydrogen-fueled cars ever catch up to EVs?</span
+          >
+          <div class="white-divider"></div>
+          <span class="title"> The Downsides of AI Artistry</span>
+          <span class="black-box-text"
+            >What are the possible adverse effects of on-demand AI image
+            generation?</span
+          >
+          <div class="white-divider"></div>
+          <span class="title"> Is VC Funding Drying Up?</span>
+          <span class="black-box-text"
+            >Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.</span
+          >
+        </div>
+        <!-- <section class="other-articles"> -->
+        <div class="image-and-text1">
+          <div class="other-articles-image">
+            <img
+              src="./assets/images/image-retro-pcs.jpg"
+              alt="Picture of Old PC's"
+              id="image1"
             />
-          </svg>
-          <span class="eth-text">0.041 ETH</span>
-          <div class="clock-and-time">
-            <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z"
-                fill="#8BACD9"
-              />
-            </svg>
-            <span>3 days left</span>
+          </div>
+          <div class="text-beside-image">
+            <h2>01</h2>
+            <h3>Reviving Retro PCs</h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
           </div>
         </div>
-        <hr class="blue-line"></hr>
-        <div class="creation">
-          <div class="avatar-container">
-          <img class="avatar" src="./images/image-avatar.png" alt="Avatar pic of author"></div>
-          <p class="creation-text">
-        Creation of <span class="creator-name">Jules Wyvern</span></p>
-        
+        <div class="image-and-text2">
+          <div class="other-articles-image">
+            <img
+              src="./assets/images/image-top-laptops.jpg"
+              alt="Picture of best laptops"
+              id="image2"
+            />
+          </div>
+          <div class="text-beside-image">
+            <h2>02</h2>
+            <h3>Top 10 Laptops of 2022</h3>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
         </div>
+        <div class="image-and-text3">
+          <div class="other-articles-image">
+            <img
+              src="./assets/images/image-gaming-growth.jpg"
+              alt="Picture of a gaming handset"
+              id="image3"
+            />
+          </div>
+          <div class="text-beside-image">
+            <h2>03</h2>
+            <h3>The Growth of Gaming</h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+        <!-- </section> -->
       </div>
-      
     </main>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Brian Marshall</a>.
-    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Brian Marshall</a>
+      </div>
+    </footer>
+    <script src="newspaper.js"></script>
   </body>
 </html>

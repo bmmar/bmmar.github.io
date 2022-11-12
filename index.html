@@ -11,127 +11,42 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
 
+    <title>Order summary card</title>
     <link rel="stylesheet" href="app.css" />
-
-    <title>News homepage</title>
   </head>
   <body>
     <main>
-      <div class="container-for-mobile-grid">
-      <nav class="navbar">
-        <!-- LOGO -->
-          <img src="./assets/images/logo.svg" alt="logo" />
-
-        <!-- NAVIGATION MENU -->         
-          <div class="menu-icon">
-            <img src="./assets/images/icon-menu.svg" alt="menu icon" />
-          </div>          
-          
-          <div class="menu">
-            <li id="exit">
-              <img src="./assets/images/icon-menu-close.svg" alt="Exit Cross" />
-            </li>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">New</a></li>
-            <li class="popular">
-              <a href="/">Popular</a>
-            </li>
-            <li><a href="/">Trending</a></li>
-            <li><a href="/">Categories</a></li>
-          </div>        
-      </nav>
-      <!-- Central Section -->
-      <div class="layout">
-        <div class="mobile-main-image">
+      <div class="card">
+        <div class="main-image">
           <img
-          src="./assets/images/image-web-3-mobile.jpg"
-            alt="Pic of building blocks representing Web 3.0"
+            src="./images/illustration-hero.svg"
+            alt="Pic of young person listening to music"
           />
         </div>
-        <div class="desktop-main-image">
-          <img
-            src="./assets/images/image-web-3-desktop.jpg"
-            alt="Pic of building blocks representing Web 3.0"
-          />
-        </div>
-        <h1>The Bright Future of Web 3.0?</h1>
-        <p class="bright-future-text">
-          We dive into the next evolution of the web that claims to put the
-          power of the platforms back into the hands of the people. But is it
-          really fulfilling its promise?
+        <h1>Order Summary</h1>
+        <p class="main-text">
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
         </p>
-        <button class="red-callout">Read more</button>
-        <div class="black-box">
-          <span class="orange-headline">New</span>
-          <span class="title">Hydrogen VS Electric Cars</span>
-          <span class="black-box-text"
-            >Will hydrogen-fueled cars ever catch up to EVs?</span
+        <p class="price-box">
+          <img src="./images/icon-music.svg" alt="musical note picture" />
+          <span class="plan-and-price">
+            <span class="annual-plan">Annual Plan</span>
+            $59.99/year</span
           >
-          <div class="white-divider"></div>
-          <span class="title"> The Downsides of AI Artistry</span>
-          <span class="black-box-text"
-            >What are the possible adverse effects of on-demand AI image
-            generation?</span
-          >
-          <div class="white-divider"></div>
-          <span class="title"> Is VC Funding Drying Up?</span>
-          <span class="black-box-text"
-            >Private funding by VC firms is down 50% YOY. We take a look at what
-            that means.</span
-          >
-        </div>
-        <!-- <section class="other-articles"> -->
-        <div class="image-and-text1">
-          <div class="other-articles-image">
-            <img
-              src="./assets/images/image-retro-pcs.jpg"
-              alt="Picture of Old PC's"
-              id="image1"
-            />
-          </div>
-          <div class="text-beside-image">
-            <h2>01</h2>
-            <h3>Reviving Retro PCs</h3>
-            <p>What happens when old PCs are given modern upgrades?</p>
-          </div>
-        </div>
-        <div class="image-and-text2">
-          <div class="other-articles-image">
-            <img
-              src="./assets/images/image-top-laptops.jpg"
-              alt="Picture of best laptops"
-              id="image2"
-            />
-          </div>
-          <div class="text-beside-image">
-            <h2>02</h2>
-            <h3>Top 10 Laptops of 2022</h3>
-            <p>Our best picks for various needs and budgets.</p>
-          </div>
-        </div>
-        <div class="image-and-text3">
-          <div class="other-articles-image">
-            <img
-              src="./assets/images/image-gaming-growth.jpg"
-              alt="Picture of a gaming handset"
-              id="image3"
-            />
-          </div>
-          <div class="text-beside-image">
-            <h2>03</h2>
-            <h3>The Growth of Gaming</h3>
-            <p>How the pandemic has sparked fresh opportunities.</p>
-          </div>
-        </div>
-        <!-- </section> -->
+          <span class="change">
+            <a href="#">Change</a>
+          </span>
+        </p>
+        <button type="submit" class="proceed">Proceed to Payment</button>
+        <p class="cancel"><a href="#">Cancel Order</a></p>
       </div>
     </main>
     <footer>
@@ -139,9 +54,8 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Brian Marshall</a>
+        >. Coded by <a href="#">Brian Marshall</a>.
       </div>
     </footer>
-    <script src="newspaper.js"></script>
   </body>
 </html>

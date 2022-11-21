@@ -14,39 +14,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <title>Order summary card</title>
     <link rel="stylesheet" href="app.css" />
+
+    <title>Expenses chart component</title>
   </head>
   <body>
     <main>
-      <div class="card">
-        <div class="main-image">
-          <img
-            src="./images/illustration-hero.svg"
-            alt="Pic of young person listening to music"
-          />
+      <!-- Top section -->
+      <div class="top-card">
+        <div class="text-and-amount">
+          <span class="text"> My balance</span>
+          <span class="amount"> $921.48</span>
         </div>
-        <h1>Order Summary</h1>
-        <p class="main-text">
-          You can now listen to millions of songs, audiobooks, and podcasts on
-          any device anywhere you like!
-        </p>
-        <p class="price-box">
-          <img src="./images/icon-music.svg" alt="musical note picture" />
-          <span class="plan-and-price">
-            <span class="annual-plan">Annual Plan</span>
-            $59.99/year</span
-          >
-          <span class="change">
-            <a href="#">Change</a>
+        <img src="./images/logo.svg" alt="Logo" />
+      </div>
+      <!-- Main section -->
+      <div class="main-card">
+        <h1>Spending - Last 7 days</h1>
+        <ul class="graph-container" id="spending-graph">
+          <li id="spend-box" class="mon-box">$23.10</li>
+          <li class="monday"></li>
+          <li id="spend-box" class="tue-box">$23.10</li>
+          <li class="tuesday"></li>
+          <li id="spend-box" class="wed-box">$23.10</li>
+          <li class="wednesday"></li>
+          <li id="spend-box" class="thu-box">$23.10</li>
+          <li class="thursday"></li>
+          <li id="spend-box" class="fri-box">$23.10</li>
+          <li class="friday"></li>
+          <li id="spend-box" class="sat-box">$23.10</li>
+          <li class="saturday"></li>
+          <li id="spend-box" class="sun-box">$23.10</li>
+          <li class="sunday"></li>
+        </ul>
+
+        <div class="days-of-week">    
+            <span id="mon">mon</span>
+            <span id="tue">tue</span>
+            <span id="wed">wed</span>
+            <span id="thu">thu</span>
+            <span id="fri">fri</span>
+            <span id="sat">sat</span>
+            <span id="sun">sun</span>
+          </div>
+
+        <hr />
+        <div class="bottom-analysis">
+          <span class="total-and-amount">
+            <span class="total-this-month">Total this month</span>
+            <span class="total">$478.33</span>
           </span>
-        </p>
-        <button type="submit" class="proceed">Proceed to Payment</button>
-        <p class="cancel"><a href="#">Cancel Order</a></p>
+          <span class="change-and-text">
+            <span class="change-percent">+2.4%</span>
+            <span class="change-text">from last month</span></span
+          >
+        </div>
       </div>
     </main>
     <footer>
@@ -57,5 +83,7 @@
         >. Coded by <a href="#">Brian Marshall</a>.
       </div>
     </footer>
+    <script type="text/javascript" src="data.json"></script>
+    <script src="expenses.js"></script>
   </body>
 </html>

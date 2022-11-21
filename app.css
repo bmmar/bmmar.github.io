@@ -2,135 +2,207 @@ html {
   background-color: white;
   margin: 0 auto;
 }
+
 body {
-  max-width: 375px;
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 14px;
-  background-color: hsl(225, 100%, 94%);
+  max-width: 340px;
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(27, 66%, 92%);
   margin: 5% auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  font-size: 18px;
 }
 
-.main-image {
-  border-radius: 10%;
+.top-card {
+  background-color: hsl(10, 79%, 65%);
+  margin: 20% 5% 5%;
+  border-radius: 0.75rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
-.main-image img {
-  max-width: 100%;
-  border-radius: 2rem 2rem 0 0;
-}
-
-main {
+.text-and-amount {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-image: url("./images/pattern-background-mobile.svg");
 }
 
-.card {
-  margin: 18% 7%;
-  background-color: hsl(227, 60%, 97%);
-  border-radius: 2rem;
-  box-shadow: 0px 1rem 0.5rem 0.1rem hsl(233, 10%, 85%);
+div .text {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+div img {
+  max-width: 3.5rem;
+}
+
+.main-card {
+  background-color: hsl(33, 100%, 98%);
+  margin: 0 5% 15%;
+  border-radius: 0.75rem;
+  padding: 1rem;
 }
 
 h1 {
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 900;
-  margin-top: 1.8rem;
-}
-
-p {
-  color: hsl(224, 23%, 55%);
-}
-
-.main-text {
-  text-align: center;
-  margin: 0 2.5rem;
-  line-height: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
+  margin-top: 0.5rem;
+  color: hsl(25, 47%, 15%);
 }
 
-.price-box {
-  background-color: hsl(228, 17%, 94%);
-  margin: 1.4rem;
-  border-radius: 0.5rem;
+.main-card #spending-graph {
+  width: 100%;
+  height: 57%;
   display: grid;
-  grid-template-columns: 20% 55% 25%;
-  padding: 5%;
+  grid-template-columns: repeat(7, 10.3%);
+  grid-template-rows: repeat(70, .15rem);
+  column-gap: 2%;
 }
 
-.price-box img,
-p .plan-and-price,
-.change {
-  align-self: center;
+span {
+  grid-row: 100;  
 }
 
-p .annual-plan {
-  font-weight: 900;
+.data {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
-p .plan-and-price {
-  margin-left: 1rem;
-}
-
-p .change a {
-  color: hsl(223, 47%, 23%);
-  font-weight: 900;
+.graph-container li{
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 4px;
   cursor: pointer;
 }
 
-p .change a:hover {
-  color: hsl(225, 2%, 61%);
-}
-
-.proceed {
-  background-color: hsl(238, 100%, 46%);
+#spend-box {  
+  justify-content: center;
+  align-items: center;
   color: white;
-  margin: 0 auto;
-  display: block;
-  padding: 1rem 4rem;
-  border: none;
-  border-radius: 0.7rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.05rem;
-  box-shadow: 0px 1rem 0.5rem 0.1rem hsl(233, 10%, 85%);
-  cursor: pointer;
+  background-color: black;
+  width: 125%;
+  margin-left: -15%;
+  min-height: 2rem;
+  border: 1px solid black;
+  font-size: 0.7rem;
+  cursor:unset;
 }
 
-.proceed:hover {
-  background-color: rgb(170, 144, 197);
+.spend-box-location {
+  grid-row: 50;
+} 
+
+.invisible {
+  display: none;
 }
 
-.cancel {
-  text-align: center;
-  font-weight: 900;
-  margin-bottom: 2rem;
+.visible {
+  display: flex;
+}
+.monday {  
+  grid-row: 80/ span 20;
+}
+
+.tuesday {
+  background-color: aquamarine;
+  grid-row: 45 / span 55;
+}
+.wednesday {
+  background-color: aquamarine;
+  grid-column: 3;
+}
+
+.days-of-week {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2%;
+}
+
+
+legend {
+  padding: 0;
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px 0 2px;
+  margin-left: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 0;
+}
+
+.main-card .days-of-week {
+  font-size: 0.7rem;
+  color: hsl(28, 10%, 53%);
+  margin-bottom: rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2%;
+}
+
+.main-card .bottom-analysis {
+  display: flex;
+  justify-content: space-between;
   margin-top: 2rem;
-  cursor: pointer;
+}
+.main-card .total-and-amount {
+  display: flex;
+  flex-direction: column;
 }
 
-.cancel a:hover {
-  color: hsl(225, 2%, 61%);
+.main-card .change-and-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 1.2rem;
 }
 
-@media (min-width: 800px) {
+.main-card .change-and-text,
+.main-card .total-this-month {
+  font-size: 0.9rem;
+}
+.main-card .total-this-month {
+  color: hsl(28, 10%, 53%);
+}
+
+.main-card .change-percent {
+  font-weight: 700;
+}
+
+.main-card .total {
+  font-weight: 700;
+  color: hsl(25, 47%, 15%);
+  font-size: 1.8rem;
+}
+
+.main-card .change-text {
+  color: hsl(28, 10%, 53%);
+}
+
+@media (min-width: 700px) {
   body {
-    max-width: 1440px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
   }
 
   main {
-    background-image: url("./images/pattern-background-desktop.svg");
+    max-width: 700px;
+    margin: 0 auto;
   }
-  .card {
-    max-width: 400px;
-    margin: 3%;
+  .main-card,
+  .top-card {
+    width: 400px;
+  }
+  h1 {
+    font-size: 1.9rem;
   }
 }
 

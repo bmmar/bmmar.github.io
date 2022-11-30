@@ -11,79 +11,133 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+
+    <title>Intro with dropdown navigation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
       rel="stylesheet"
     />
-
+    <script
+      src="https://kit.fontawesome.com/bfce23ebd6.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="app.css" />
-
-    <title>Expenses chart component</title>
   </head>
   <body>
     <main>
-      <!-- Top section -->
-      <div class="top-card">
-        <div class="text-and-amount">
-          <span class="text"> My balance</span>
-          <span class="amount"> $921.48</span>
-        </div>
-        <img src="./images/logo.svg" alt="Logo" />
-      </div>
-      <!-- Main section -->
-      <div class="main-card">
-        <h1>Spending - Last 7 days</h1>
-        <ul class="graph-container" id="spending-graph">
-          <li id="spend-box" class="mon-box">$23.10</li>
-          <li class="monday"></li>
-          <li id="spend-box" class="tue-box">$23.10</li>
-          <li class="tuesday"></li>
-          <li id="spend-box" class="wed-box">$23.10</li>
-          <li class="wednesday"></li>
-          <li id="spend-box" class="thu-box">$23.10</li>
-          <li class="thursday"></li>
-          <li id="spend-box" class="fri-box">$23.10</li>
-          <li class="friday"></li>
-          <li id="spend-box" class="sat-box">$23.10</li>
-          <li class="saturday"></li>
-          <li id="spend-box" class="sun-box">$23.10</li>
-          <li class="sunday"></li>
-        </ul>
-
-        <div class="days-of-week">    
-            <span id="mon">mon</span>
-            <span id="tue">tue</span>
-            <span id="wed">wed</span>
-            <span id="thu">thu</span>
-            <span id="fri">fri</span>
-            <span id="sat">sat</span>
-            <span id="sun">sun</span>
+      <nav>
+        <ul class="menu">
+          <h2 class="logo">
+            <a href="#">
+              <img src="./images/logo.svg" alt="snap logo" />
+            </a>
+          </h2>
+          <div class="container">
+            <div class="first-menu-part">
+              <li class="item has-submenu">
+                <a tabindex="0"
+                  >Features<img src="./images/icon-arrow-down.svg" alt="" />
+                </a>
+                <ul class="submenu">
+                  <li class="subitem">
+                    <a href="#"
+                      ><img src="./images/icon-todo.svg" alt="To do icon" />
+                      Todo List</a
+                    >
+                  </li>
+                  <li class="subitem">
+                    <a href="#"
+                      ><img
+                        src="./images/icon-calendar.svg"
+                        alt="Calendar icon"
+                      />
+                      Calendar</a
+                    >
+                  </li>
+                  <li class="subitem">
+                    <a href="#"
+                      ><img
+                        src="./images/icon-reminders.svg"
+                        alt="Reminders icon"
+                      />
+                      Reminders</a
+                    >
+                  </li>
+                  <li class="subitem">
+                    <a href="#"
+                      ><img
+                        src="./images/icon-planning.svg"
+                        alt="Planning icon"
+                      />
+                      Planning</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="item has-submenu">
+                <a tabindex="0"
+                  >Company<img src="./images/icon-arrow-down.svg" alt=""
+                /></a>
+                <ul class="submenu">
+                  <li class="subitem"><a href="#">History</a></li>
+                  <li class="subitem"><a href="#">Our Team</a></li>
+                  <li class="subitem"><a href="#">Blog</a></li>
+                </ul>
+              </li>
+              <li class="item"><a href="#">Contact</a></li>
+              <li class="item"><a href="#">About</a></li>
+            </div>
+            <div class="second-menu-part">
+              <li class="item button"><a href="#">Login</a></li>
+              <li class="item button secondary"><a href="#">Register</a></li>
+            </div>
           </div>
+          <li class="toggle">
+            <a href="#"
+              ><img src="./images/icon-menu.svg" alt="" class="hamburger"
+            /></a>
+          </li>
+        </ul>
+      </nav>
 
-        <hr />
-        <div class="bottom-analysis">
-          <span class="total-and-amount">
-            <span class="total-this-month">Total this month</span>
-            <span class="total">$478.33</span>
-          </span>
-          <span class="change-and-text">
-            <span class="change-percent">+2.4%</span>
-            <span class="change-text">from last month</span></span
-          >
+      <img
+        class="mobile-main-pic"
+        src="./images/image-hero-mobile.png"
+        alt="standing guy working on his laptop"
+      />
+      <div class="desktop-layout">
+        <img
+          src="./images/image-hero-desktop.png"
+          alt="standing guy working on his laptop"
+          class="desktop-main-pic"
+        />
+        <div class="desktop-left">
+          <h1>
+            <span class="make">Make </span>
+            remote work
+          </h1>
+          <p class="main-text">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="learn-more">Learn more</button>
+          <div class="bottom-logos">
+            <img src="./images/client-databiz.svg" alt="databiz logo" />
+            <img src="./images/client-audiophile.svg" alt="audiophile logo" />
+            <img src="./images/client-meet.svg" alt="meet logo" />
+            <img src="./images/client-maker.svg" alt="maker logo" />
+          </div>
         </div>
       </div>
     </main>
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Brian Marshall</a>.
-      </div>
-    </footer>
-    <script type="text/javascript" src="data.json"></script>
-    <script src="expenses.js"></script>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Brian Marshall</a>.
+    </div>
+    <script src="./intro.js"></script>
   </body>
 </html>

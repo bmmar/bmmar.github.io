@@ -14,94 +14,289 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Space+Mono:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
-    <title>Pricing with toggle</title>
-
     <link rel="stylesheet" href="./app.css" />
+
+    <title>Multi-step form</title>
   </head>
   <body>
-    <div class="decorative-bkg">
-      <img src="./images/bg-top.svg" alt="Squiglly lines background" />
-    </div>
-    <h1>Our Pricing</h1>
-    <div class="toggle-area">
-      <div class="annually">Annually</div>
-      <!-- Rounded switch -->
-      <label class="switch">
-        <input type="checkbox" />
-        <span class="slider round"></span>
-      </label>
-      <div class="monthly">Monthly</div>
-    </div>
-    <div class="card-area">
-      <div class="basic-card">
-        <div class="heading">Basic</div>
-        <div class="monthly-price">
-          <span class="dollar-sign">&dollar;</span
-          ><span class="amount">19.99</span>
+    <div class="wrapper-blank">
+      <div class="main-bkg">
+        <div class="image-container">
+          <div class="sidebar">
+            <!-- Sidebar start -->
+            <div class="sidebar-num-and-text">
+              <span class="sidebar-number number-one">1</span>
+              <div class="step-and-text">
+                <span class="step">Step 1</span>
+                <span class="sidebar-text">Your info</span>
+              </div>
+            </div>
+            <div class="sidebar-num-and-text">
+              <span class="sidebar-number number-two">2</span>
+              <div class="step-and-text">
+                <span class="step">Step 2</span>
+                <span class="sidebar-text">Select plan</span>
+              </div>
+            </div>
+            <div class="sidebar-num-and-text">
+              <span class="sidebar-number number-three">3</span>
+              <div class="step-and-text">
+                <span class="step">Step 3</span>
+                <span class="sidebar-text">Add-ons</span>
+              </div>
+            </div>
+            <div class="sidebar-num-and-text">
+              <span class="sidebar-number number-four">4</span>
+              <div class="step-and-text">
+                <span class="step">Step 4</span>
+                <span class="sidebar-text">Summary</span>
+              </div>
+            </div>
+
+            <!-- Sidebar end -->
+          </div>
         </div>
-        <div class="annual-price">
-          <span class="dollar-sign">&dollar;</span>
-          <span class="amount">199.99</span>
+        <div class="card">
+          <!-------------- Step 1 start --------------->
+          <div class="step-one">
+            <h1>Personal info</h1>
+            <div class="input-area">
+              <div class="request-text">
+                Please provide your name, email address, and phone number.
+              </div>
+              <label for="full-name"
+                >Name
+                <span class="error-text name-error-text"
+                  >This field is required</span
+                >
+              </label>
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                placeholder="e.g. Stephen King"
+              />
+              <label for="email"
+                >Email Address
+                <span class="error-text email-error-text"
+                  >This field is required</span
+                >
+              </label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder=" e.g. stephenking@lorem.com"
+              />
+              <label for="phone-number"
+                >Phone Number
+                <span class="error-text phone-error-text"
+                  >This field is required</span
+                >
+              </label>
+              <input
+                type="text"
+                id="phone-number"
+                name="phone-number"
+                placeholder=" e.g. +1 234 567 890"
+              />
+            </div>
+          </div>
+
+          <!-- Step 1 end -->
+
+          <div class="step-two" id="step-two">
+            <!----------------- Step 2 start ----------------------->
+
+            <h1>Select your plan</h1>
+            <div class="request-text">
+              You have the option of monthly or yearly billing.
+            </div>
+            <div class="select-options-container">
+              <div class="monthly-choice monthly-arcade">
+                <img src="./assets/images/icon-arcade.svg" alt="Arcade Icon" />
+                <p>
+                  <span class="bold-text">Arcade</span>
+                  <span class="price">$9/mo</span>
+                </p>
+              </div>
+              <div class="monthly-choice monthly-advanced">
+                <img
+                  src="./assets/images/icon-advanced.svg"
+                  alt="Advanced Icon"
+                />
+                <p>
+                  <span class="bold-text">Advanced</span>
+                  <span class="price">$12/mo</span>
+                </p>
+              </div>
+              <div class="monthly-choice monthly-pro">
+                <img src="./assets/images/icon-pro.svg" alt="Pro Icon" />
+                <p>
+                  <span class="bold-text">Pro</span>
+                  <span class="price">$15/mo</span>
+                </p>
+              </div>
+
+              <!-- **********  Annual rates start here  ************ -->
+              <div class="annual-choice annual-arcade">
+                <img src="./assets/images/icon-arcade.svg" alt="Arcade Icon" />
+                <p>
+                  <span class="bold-text">Arcade</span>
+                  <span class="price">$90/yr</span>
+                  <span class="two-months-free">2 months free</span>
+                </p>
+              </div>
+              <div class="annual-choice annual-advanced">
+                <img
+                  src="./assets/images/icon-advanced.svg"
+                  alt="Advanced Icon"
+                />
+                <p>
+                  <span class="bold-text">Advanced</span>
+                  <span class="price">$120/yr</span>
+                  <span class="two-months-free">2 months free</span>
+                </p>
+              </div>
+              <div class="annual-choice annual-pro">
+                <img src="./assets/images/icon-pro.svg" alt="Pro Icon" />
+                <p>
+                  <span class="bold-text">Pro</span>
+                  <span class="price">$150/yr</span>
+                  <span class="two-months-free">2 months free</span>
+                </p>
+              </div>
+            </div>
+            <div class="monthly-yearly-container">
+              Monthly
+              <label class="switch">
+                <input type="checkbox" id="monthly-yearly-choice" />
+              </label>
+              Yearly
+            </div>
+
+            <!------------- Step 2 end --------------->
+          </div>
+
+          <div class="step-three">
+            <!------------- Step 3 start ------------->
+            <h1>Pick add-ons</h1>
+            <div class="request-text">
+              Add-ons help enhance your gaming experience.
+            </div>
+            <div class="monthly-choice-p3 online-service-p3">
+              <label class="form-control">
+                <input
+                  class="options"
+                  type="checkbox"
+                  name="checkbox"
+                  id="online"
+                />
+                <label for="online"></label>
+              </label>
+              <div class="middle-text">
+                <span class="bold-text bold-text-p3">Online service</span>
+                <span class="smaller-text">Access to multiplayer games</span>
+              </div>
+              <span class="price-p3 monthly-price-p3">+$1/mo</span>
+              <span class="price-p3 annual-price-p3">+$10/yr</span>
+            </div>
+            <div class="monthly-choice-p3 larger-storage-p3">
+              <label class="form-control">
+                <input
+                  class="options"
+                  type="checkbox"
+                  name="checkbox"
+                  id="larger-storage"
+                />
+                <label for="larger-storage"></label>
+              </label>
+              <div class="middle-text">
+                <span class="bold-text bold-text-p3">Larger storage</span>
+                <span class="smaller-text">Extra 1TB of cloud save</span>
+              </div>
+              <span class="price-p3 monthly-price-p3">+$2/mo</span>
+              <span class="price-p3 annual-price-p3">+$20/yr</span>
+            </div>
+            <div class="monthly-choice-p3 customizable-p3">
+              <label class="form-control">
+                <input
+                  class="options"
+                  type="checkbox"
+                  name="checkbox"
+                  id="customizable"
+                />
+                <label for="customizable"></label>
+              </label>
+              <div class="middle-text">
+                <span class="bold-text bold-text-p3">Customizable Profile</span>
+                <span class="smaller-text">Custom theme on your profile</span>
+              </div>
+              <span class="price-p3 monthly-price-p3">+$2/mo</span>
+              <span class="price-p3 annual-price-p3">+$20/yr</span>
+            </div>
+
+            <!--------------- Step 3 end ---------------------->
+          </div>
+          <div class="step-four">
+            <!--------------- Step 4 start -------------------->
+
+            <h1>Finishing up</h1>
+            <div class="request-text">
+              Double-check everything looks OK before confirming.
+            </div>
+            <div class="grid-container">
+              <div class="totals-container">
+                <!-- Dynamically add subscription and add-on selections here -->
+                <div class="plan-holder" id="plan-holder"></div>
+                <div class="price-p4-plan">$0</div>
+                <a id="change-link">Change</a>
+                <hr class="h-ruler" />
+                <div class="p4-text online-holder"></div>
+                <div class="price-p4 online-price-p4"></div>
+                <div class="p4-text larger-holder"></div>
+                <div class="price-p4 larger-price-p4"></div>
+                <div class="p4-text customizable-holder"></div>
+                <div class="price-p4 customizable-price-p4"></div>
+              </div>
+              <div class="total-cost">Total (per</div>
+              <div class="total-price-p4">$</div>
+            </div>
+            <!---------------- Step 4 end ---------------------->
+          </div>
+          <div class="step-five">
+            <!-- Step 5 start -->
+            <img src="./assets/images/icon-thank-you.svg" alt="Large tick" />
+            <h1>Thank you!</h1>
+            <p class="thanks">Thanks for confirming your subscription!</p>
+            <p>
+              We hope you have fun using our platform. If you ever need support,
+              please feel free to email us at support@loremgaming.com.
+            </p>
+
+            <!-- Step 5 end -->
+          </div>
         </div>
-        <hr />
-        <span class="product-details">500 GB Storage</span>
-        <hr />
-        <span class="product-details">2 Users Allowed</span>
-        <hr />
-        <span class="product-details">Send up to 3 GB</span>
-        <hr />
-        <button>Learn More</button>
       </div>
-
-      <div class="professional-card">
-        <div class="heading">Professional</div>
-        <div class="monthly-price">
-          <span class="dollar-sign">&dollar;</span
-          ><span class="amount">24.99</span>
-        </div>
-
-        <div class="annual-price">
-          <span class="dollar-sign">&dollar;</span>
-          <span class="amount">249.99</span>
-        </div>
-        <hr />
-        <span class="product-details">1 TB Storage</span>
-        <hr />
-        <span class="product-details">5 Users Allowed</span>
-        <hr />
-        <span class="product-details">Send up to 10 GB</span>
-        <hr />
-        <button>Learn More</button>
+      <div class="navigation-buttons navigation-buttons-p1">
+        <button class="next-step next-step-p1">Next Step</button>
       </div>
-
-      <div class="master-card">
-        <div class="heading">Master</div>
-        <div class="monthly-price">
-          <span class="dollar-sign">&dollar;</span
-          ><span class="amount">39.99</span>
-        </div>
-
-        <div class="annual-price">
-          <span class="dollar-sign">&dollar;</span>
-          <span class="amount">399.99</span>
-        </div>
-        <hr />
-
-        <span class="product-details">2 TB Storage</span>
-        <hr />
-        <span class="product-details">10 Users Allowed</span>
-        <hr />
-        <span class="product-details">Send up to 20 GB</span>
-        <hr />
-        <button>Learn More</button>
+      <div class="navigation-buttons navigation-buttons-p2">
+        <button class="go-back">Go Back</button>
+        <button class="next-step next-step-p2">Next Step</button>
       </div>
-    </div>
-    <div class="bottom-image-container">
-      <img src="./images/bg-bottom.svg" alt="Bottom squirly background image">
+      <div class="navigation-buttons navigation-buttons-p3">
+        <button class="go-back go-backP3">Go Back</button>
+        <button class="next-step next-step-p3">Next Step</button>
+      </div>
+      <div class="navigation-buttons navigation-buttons-p4">
+        <button class="go-back go-backP4">Go Back</button>
+        <button class="next-step next-step-p4">Confirm</button>
+      </div>
     </div>
 
     <div class="attribution">
@@ -110,6 +305,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Brian Marshall</a>.
     </div>
-    <script src="./pricing.js"></script>
+    <script src="./multi.js"></script>
   </body>
 </html>

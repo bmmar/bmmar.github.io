@@ -11,300 +11,407 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="app.css" />
 
-    <link rel="stylesheet" href="./app.css" />
-
-    <title>Multi-step form</title>
+    <title>Bookmark landing page</title>
   </head>
   <body>
-    <div class="wrapper-blank">
-      <div class="main-bkg">
-        <div class="image-container">
-          <div class="sidebar">
-            <!-- Sidebar start -->
-            <div class="sidebar-num-and-text">
-              <span class="sidebar-number number-one">1</span>
-              <div class="step-and-text">
-                <span class="step">Step 1</span>
-                <span class="sidebar-text">Your info</span>
-              </div>
-            </div>
-            <div class="sidebar-num-and-text">
-              <span class="sidebar-number number-two">2</span>
-              <div class="step-and-text">
-                <span class="step">Step 2</span>
-                <span class="sidebar-text">Select plan</span>
-              </div>
-            </div>
-            <div class="sidebar-num-and-text">
-              <span class="sidebar-number number-three">3</span>
-              <div class="step-and-text">
-                <span class="step">Step 3</span>
-                <span class="sidebar-text">Add-ons</span>
-              </div>
-            </div>
-            <div class="sidebar-num-and-text">
-              <span class="sidebar-number number-four">4</span>
-              <div class="step-and-text">
-                <span class="step">Step 4</span>
-                <span class="sidebar-text">Summary</span>
-              </div>
-            </div>
+    <header>
+      <div id="myNav" class="overlay">
+        <div class="bookmark-logo-mono">
+          <img
+            src="./images/logo-bookmark-mono.svg"
+            alt="Bookmark Logo"
+            class="bookmark-logo"
+          />
+          <img
+            src="./images/icon-close.svg"
+            alt="Close Button"
+            class="closebtn"
+          />
+        </div>
+        <div class="overlay-content">
+          <div class="h-line overlay-line"></div>
+          <a href="#features">Features</a>
+          <div class="h-line overlay-line"></div>
+          <a href="#">Pricing</a>
+          <div class="h-line overlay-line"></div>
+          <a href="#">Contact</a>
+          <div class="h-line overlay-line"></div>
+          <a href="#">Login</a>
+        </div>
+        <div class="bottom-logos">
+          <img src="./images/icon-facebook.svg" alt="Facebook icon" />
+          <img src="./images/icon-twitter.svg" alt="Twitter icon" />
+        </div>
+      </div>
+      <div class="bookmark-logo">
+        <img src="./images/logo-bookmark.svg" alt="Bookmark Logo" />
+      </div>
+      <div class="hamburger-menu">
+        <img
+          src="./images/icon-hamburger.svg"
+          alt="Hamburger Menu"
+          class="hamburger-icon"
+        />
+      </div>
+      <div class="desktop-menu">
+        <ul>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Contact</li>
+          <li>
+            <button class="login-button">Login</button>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-            <!-- Sidebar end -->
+    <main>
+      <div class="desktop-grid-1">
+        <div class="background-shapes-page-top">
+          <div class="background-shape-square"></div>
+          <div class="background-shape-circle"></div>
+          <div class="hero-image">
+            <img
+              src="./images/illustration-hero.svg"
+              alt="Representation of a tablet device"
+            />
           </div>
         </div>
-        <div class="card">
-          <!-------------- Step 1 start --------------->
-          <div class="step-one">
-            <h1>Personal info</h1>
-            <div class="input-area">
-              <div class="request-text">
-                Please provide your name, email address, and phone number.
-              </div>
-              <label for="full-name"
-                >Name
-                <span class="error-text name-error-text"
-                  >This field is required</span
-                >
-              </label>
-              <input
-                type="text"
-                id="full-name"
-                name="full-name"
-                placeholder="e.g. Stephen King"
-              />
-              <label for="email"
-                >Email Address
-                <span class="error-text email-error-text"
-                  >This field is required</span
-                >
-              </label>
-              <input
-                type="text"
-                id="email"
-                name="email"
-                placeholder=" e.g. stephenking@lorem.com"
-              />
-              <label for="phone-number"
-                >Phone Number
-                <span class="error-text phone-error-text"
-                  >This field is required</span
-                >
-              </label>
-              <input
-                type="text"
-                id="phone-number"
-                name="phone-number"
-                placeholder=" e.g. +1 234 567 890"
-              />
-            </div>
-          </div>
-
-          <!-- Step 1 end -->
-
-          <div class="step-two" id="step-two">
-            <!----------------- Step 2 start ----------------------->
-
-            <h1>Select your plan</h1>
-            <div class="request-text">
-              You have the option of monthly or yearly billing.
-            </div>
-            <div class="select-options-container">
-              <div class="monthly-choice monthly-arcade">
-                <img src="./assets/images/icon-arcade.svg" alt="Arcade Icon" />
-                <p>
-                  <span class="bold-text">Arcade</span>
-                  <span class="price">$9/mo</span>
-                </p>
-              </div>
-              <div class="monthly-choice monthly-advanced">
-                <img
-                  src="./assets/images/icon-advanced.svg"
-                  alt="Advanced Icon"
-                />
-                <p>
-                  <span class="bold-text">Advanced</span>
-                  <span class="price">$12/mo</span>
-                </p>
-              </div>
-              <div class="monthly-choice monthly-pro">
-                <img src="./assets/images/icon-pro.svg" alt="Pro Icon" />
-                <p>
-                  <span class="bold-text">Pro</span>
-                  <span class="price">$15/mo</span>
-                </p>
-              </div>
-
-              <!-- **********  Annual rates start here  ************ -->
-              <div class="annual-choice annual-arcade">
-                <img src="./assets/images/icon-arcade.svg" alt="Arcade Icon" />
-                <p>
-                  <span class="bold-text">Arcade</span>
-                  <span class="price">$90/yr</span>
-                  <span class="two-months-free">2 months free</span>
-                </p>
-              </div>
-              <div class="annual-choice annual-advanced">
-                <img
-                  src="./assets/images/icon-advanced.svg"
-                  alt="Advanced Icon"
-                />
-                <p>
-                  <span class="bold-text">Advanced</span>
-                  <span class="price">$120/yr</span>
-                  <span class="two-months-free">2 months free</span>
-                </p>
-              </div>
-              <div class="annual-choice annual-pro">
-                <img src="./assets/images/icon-pro.svg" alt="Pro Icon" />
-                <p>
-                  <span class="bold-text">Pro</span>
-                  <span class="price">$150/yr</span>
-                  <span class="two-months-free">2 months free</span>
-                </p>
-              </div>
-            </div>
-            <div class="monthly-yearly-container">
-              Monthly
-              <label class="switch">
-                <input type="checkbox" id="monthly-yearly-choice" />
-              </label>
-              Yearly
-            </div>
-
-            <!------------- Step 2 end --------------->
-          </div>
-
-          <div class="step-three">
-            <!------------- Step 3 start ------------->
-            <h1>Pick add-ons</h1>
-            <div class="request-text">
-              Add-ons help enhance your gaming experience.
-            </div>
-            <div class="monthly-choice-p3 online-service-p3">
-              <label class="form-control">
-                <input
-                  class="options"
-                  type="checkbox"
-                  name="checkbox"
-                  id="online"
-                />
-                <label for="online"></label>
-              </label>
-              <div class="middle-text">
-                <span class="bold-text bold-text-p3">Online service</span>
-                <span class="smaller-text">Access to multiplayer games</span>
-              </div>
-              <span class="price-p3 monthly-price-p3">+$1/mo</span>
-              <span class="price-p3 annual-price-p3">+$10/yr</span>
-            </div>
-            <div class="monthly-choice-p3 larger-storage-p3">
-              <label class="form-control">
-                <input
-                  class="options"
-                  type="checkbox"
-                  name="checkbox"
-                  id="larger-storage"
-                />
-                <label for="larger-storage"></label>
-              </label>
-              <div class="middle-text">
-                <span class="bold-text bold-text-p3">Larger storage</span>
-                <span class="smaller-text">Extra 1TB of cloud save</span>
-              </div>
-              <span class="price-p3 monthly-price-p3">+$2/mo</span>
-              <span class="price-p3 annual-price-p3">+$20/yr</span>
-            </div>
-            <div class="monthly-choice-p3 customizable-p3">
-              <label class="form-control">
-                <input
-                  class="options"
-                  type="checkbox"
-                  name="checkbox"
-                  id="customizable"
-                />
-                <label for="customizable"></label>
-              </label>
-              <div class="middle-text">
-                <span class="bold-text bold-text-p3">Customizable Profile</span>
-                <span class="smaller-text">Custom theme on your profile</span>
-              </div>
-              <span class="price-p3 monthly-price-p3">+$2/mo</span>
-              <span class="price-p3 annual-price-p3">+$20/yr</span>
-            </div>
-
-            <!--------------- Step 3 end ---------------------->
-          </div>
-          <div class="step-four">
-            <!--------------- Step 4 start -------------------->
-
-            <h1>Finishing up</h1>
-            <div class="request-text">
-              Double-check everything looks OK before confirming.
-            </div>
-            <div class="grid-container">
-              <div class="totals-container">
-                <!-- Dynamically add subscription and add-on selections here -->
-                <div class="plan-holder" id="plan-holder"></div>
-                <div class="price-p4-plan">$0</div>
-                <a id="change-link">Change</a>
-                <hr class="h-ruler" />
-                <div class="p4-text online-holder"></div>
-                <div class="price-p4 online-price-p4"></div>
-                <div class="p4-text larger-holder"></div>
-                <div class="price-p4 larger-price-p4"></div>
-                <div class="p4-text customizable-holder"></div>
-                <div class="price-p4 customizable-price-p4"></div>
-              </div>
-              <div class="total-cost">Total (per</div>
-              <div class="total-price-p4">$</div>
-            </div>
-            <!---------------- Step 4 end ---------------------->
-          </div>
-          <div class="step-five">
-            <!-- Step 5 start -->
-            <img src="./assets/images/icon-thank-you.svg" alt="Large tick" />
-            <h1>Thank you!</h1>
-            <p class="thanks">Thanks for confirming your subscription!</p>
+        <div class="initial-text">
+          <h1 class="simple-bookmark-manager">A Simple Bookmark Manager</h1>
+          <div class="explanatory-text text-one">
             <p>
-              We hope you have fun using our platform. If you ever need support,
-              please feel free to email us at support@loremgaming.com.
+              A clean and simple interface to organize your favourite websites.
+              Open a new browser tab and see your sites load instantly. Try it
+              for free.
             </p>
-
-            <!-- Step 5 end -->
+          </div>
+          <div class="select-browser-buttons">
+            <button>Get it on Chrome</button>
+            <button>Get it on Firefox</button>
           </div>
         </div>
       </div>
-      <div class="navigation-buttons navigation-buttons-p1">
-        <button class="next-step next-step-p1">Next Step</button>
-      </div>
-      <div class="navigation-buttons navigation-buttons-p2">
-        <button class="go-back">Go Back</button>
-        <button class="next-step next-step-p2">Next Step</button>
-      </div>
-      <div class="navigation-buttons navigation-buttons-p3">
-        <button class="go-back go-backP3">Go Back</button>
-        <button class="next-step next-step-p3">Next Step</button>
-      </div>
-      <div class="navigation-buttons navigation-buttons-p4">
-        <button class="go-back go-backP4">Go Back</button>
-        <button class="next-step next-step-p4">Confirm</button>
-      </div>
-    </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Brian Marshall</a>.
-    </div>
-    <script src="./multi.js"></script>
+      <h2 class="features-heading" id="features">Features</h2>
+      <div class="explanatory-text text-two">
+        <p>
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+      </div>
+
+      <!--------------------------- Mobile Features Clickable ---------------------->
+      <div class="features-mobile">
+        <div class="h-line"></div>
+        <div class="feature-text simple-bookmarking">Simple Bookmarking</div>
+        <div class="feature-selected-line"></div>
+        <div class="h-line"></div>
+        <div class="feature-text speedy-searching">Speedy Searching</div>
+        <div class="feature-selected-line"></div>
+        <div class="h-line"></div>
+        <div class="feature-text easy-sharing">Easy Sharing</div>
+        <div class="feature-selected-line"></div>
+        <div class="h-line"></div>
+      </div>
+
+      <!--------------------------- Desktop Features Clickable ---------------------->
+      <div class="features-desktop">
+        <div class="feature-text simple-bookmarking">Simple Bookmarking</div>
+        <div class="feature-text speedy-searching">Speedy Searching</div>
+        <div class="feature-text easy-sharing">Easy Sharing</div>
+      </div>
+      <div class="feature-selected-lines">
+        <div class="feature-selected-line line-for-simple-bookmarking"></div>
+        <div class="feature-selected-line line-for-speedy-searching"></div>
+        <div class="feature-selected-line line-for-easy-sharing"></div>
+      </div>
+      <div class="h-line"></div>
+
+      <!--------------------- TAB 1 Simple Boookmarking ---------------------------------->
+
+      <div class="features-tab-1">
+        <div class="background-shapes-two">
+          <div
+            class="background-shape-square background-shape-square-two"
+          ></div>
+          <div
+            class="background-shape-circle background-shape-circle-two"
+          ></div>
+
+          <div class="features-illustration tab-1">
+            <img
+              src="./images/illustration-features-tab-1.svg"
+              alt="Representation of a tablet device"
+            />
+          </div>
+        </div>
+        <!-- </div> -->
+        <div class="desktop-features">
+          <h2 class="desktop-features-headings">Bookmark in one click</h2>
+          <div class="explanatory-text explanatory-text-features">
+            <p>
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control over how you manage your
+              favourite sites.
+            </p>
+            <button class="more-info left-aligned-more-info">More Info</button>
+          </div>
+        </div>
+      </div>
+
+      <!--------------------- TAB 2 Speedy Searching ---------------------------------->
+
+      <div class="features-tab-2">
+        <div class="background-shapes-two">
+          <div
+            class="background-shape-square background-shape-square-two"
+          ></div>
+          <div
+            class="background-shape-circle background-shape-circle-two"
+          ></div>
+
+          <div class="features-illustration tab-2">
+            <img
+              src="./images/illustration-features-tab-2.svg"
+              alt="Representation of a tablet device"
+            />
+          </div>
+        </div>
+
+        <div class="desktop-features">
+          <h2 class="desktop-features-headings">Intelligent search</h2>
+          <div class="explanatory-text explanatory-text-features">
+            <p>
+              Our powerful search feature will help you find saved sites in no
+              time at all. No need to trawl through all of your bookmarks.
+            </p>
+            <button class="more-info left-aligned-more-info">More Info</button>
+          </div>
+        </div>
+      </div>
+
+      <!--------------------- TAB 3 Easy Sharing ---------------------------------->
+      <div class="features-tab-3">
+        <div class="background-shapes-two">
+          <div
+            class="background-shape-square background-shape-square-two"
+          ></div>
+          <div
+            class="background-shape-circle background-shape-circle-two"
+          ></div>
+
+          <div class="features-illustration tab-3">
+            <img
+              src="./images/illustration-features-tab-3.svg"
+              alt="Representation of a tablet device"
+            />
+          </div>
+        </div>
+        <div class="desktop-features">
+          <h2 class="desktop-features-headings">Share your bookmarks</h2>
+          <div class="explanatory-text explanatory-text-features">
+            <p>
+              Easily share your bookmarks and collections with others. Create a
+              shareable link that you can send at the click of a button.
+            </p>
+            <button class="more-info left-aligned-more-info">More Info</button>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+
+      <!--------------------------- Browser download cards ---------------------->
+      <h2>Download the extension</h2>
+      <div class="explanatory-text browser-text">
+        <p>
+          We’ve got more browsers in the pipeline. Please do let us know if
+          you’ve got a favourite you’d like us to prioritize.
+        </p>
+      </div>
+      <div class="browser-cards-container">
+        <div class="browser-card browser-card-chrome">
+          <div class="browser-logo">
+            <img src="./images/logo-chrome.svg" alt="Google Chrome logo" />
+          </div>
+          <h2>Add to Chrome</h2>
+          <div class="explanatory-text">
+            <p>Minimum version 62</p>
+          </div>
+          <div class="background-dots">
+            <img src="./images/bg-dots.svg" alt="background dots" />
+          </div>
+          <button class="more-info">Add & Install Extension</button>
+        </div>
+
+        <div class="browser-card browser-card-firefox">
+          <div class="browser-logo">
+            <img src="./images/logo-firefox.svg" alt="Firefox logo" />
+          </div>
+          <h2>Add to Firefox</h2>
+          <div class="explanatory-text">
+            <p>Minimum version 55</p>
+          </div>
+          <div class="background-dots">
+            <img src="./images/bg-dots.svg" alt="background dots" />
+          </div>
+          <button class="more-info">Add & Install Extension</button>
+        </div>
+
+        <div class="browser-card browser-card-opera">
+          <div class="browser-logo">
+            <img src="./images/logo-opera.svg" alt="Opera logo" />
+          </div>
+          <h2>Add to Opera</h2>
+          <div class="explanatory-text">
+            <p>Minimum version 46</p>
+          </div>
+          <div class="background-dots">
+            <img src="./images/bg-dots.svg" alt="background dots" />
+          </div>
+          <button class="more-info">Add & Install Extension</button>
+        </div>
+      </div>
+
+      <div class="faqs-container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="explanatory-text explanatory-text-faqs">
+          <p>
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
+        </div>
+
+        <!-- Question 1 -->
+
+        <div class="FAQ-questions">
+          What is Bookmark?
+          <img src="./images/icon-arrow.svg" alt="Arrow" class="arrow" />
+          <img
+            src="./images/icon-up-arrow.svg"
+            alt="up-arrow"
+            class="up-arrow"
+          />
+        </div>
+
+        <!-- Answer 1 -->
+
+        <div class="FAQ-answers">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+          tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis
+          quam ornare mattis.
+        </div>
+
+        <!-- Question 2 -->
+        <div class="h-line h-line-faqs"></div>
+        <div class="FAQ-questions">
+          How can I request a new browser?
+          <img src="./images/icon-arrow.svg" alt="Arrow" class="arrow" />
+          <img
+            src="./images/icon-up-arrow.svg"
+            alt="up-arrow"
+            class="up-arrow"
+          />
+        </div>
+
+        <!-- Answer 2 -->
+        <div class="FAQ-answers">
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+          ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
+          aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+          Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+          Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+        </div>
+
+        <!-- Question 3 -->
+        <div class="h-line h-line-faqs"></div>
+        <div class="FAQ-questions">
+          Is there a mobile app?
+          <img src="./images/icon-arrow.svg" alt="Arrow" class="arrow" />
+          <img
+            src="./images/icon-up-arrow.svg"
+            alt="up-arrow"
+            class="up-arrow"
+          />
+        </div>
+
+        <!-- Answer 3 -->
+        <div class="FAQ-answers">
+          Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+          vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
+          quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex
+          et ultricies bibendum.
+        </div>
+
+        <!-- Question 4 -->
+        <div class="h-line h-line-faqs"></div>
+        <div class="FAQ-questions">
+          What about other Chromium browsers?
+          <img src="./images/icon-arrow.svg" alt="Arrow" class="arrow" />
+          <img
+            src="./images/icon-up-arrow.svg"
+            alt="up-arrow"
+            class="up-arrow"
+          />
+        </div>
+
+        <!-- Answer 4 -->
+        <div class="FAQ-answers">
+          Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
+          mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque
+          non ut velit.
+        </div>
+        <div class="h-line h-line-faqs"></div>
+      </div>
+      <div class="desktop-bottom-button">
+        <button class="more-info centered-more-info">More Info</button>
+      </div>
+      <div class="bottom-box-one">
+        <p class="already-joined">35,000+ already joined</p>
+        <p class="stay-up-to-date">Stay up-to-date with what we’re doing</p>
+        <div class="input-and-contact-us">
+          <input type="text" placeholder="Enter your email address" />
+          <button class="contact">Contact Us</button>
+        </div>
+      </div>
+      <div class="bottom-box-two">
+        <div class="bookmark-logo-bottom">
+          <img
+            src="./images/logo-bookmark-mono.svg"
+            alt="Bookmark Logo"
+            class="bookmark-logo"
+          />
+        </div>
+        <ul>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Contact</li>
+        </ul>
+        <div class="end-bottom-logos">
+          <img src="./images/icon-facebook.svg" alt="Facebook icon" />
+          <img src="./images/icon-twitter.svg" alt="Twitter icon" />
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Brian Marshall</a>.
+      </p>
+    </footer>
+    <script src="./bookmark.js"></script>
   </body>
 </html>
